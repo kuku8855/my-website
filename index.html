@@ -3,197 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的首个 GitHub 网站</title>
+    <title>我的网站</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 40px 20px;
+            padding: 30px 15px;
         }
-        .card {
+        
+        .container {
             background: white;
-            border-radius: 16px;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-            width: 90%;
-            max-width: 700px;
-            overflow: hidden;
-        }
-        header {
-            background: linear-gradient(to right, #4776E6, #8E54E9);
-            color: white;
-            padding: 60px 45px 35px;
-            position: relative;
+            border-radius: 18px;
+            box-shadow: 0 7px 80px rgba(156, 136, 255, 0.67);
+            padding: 58px;
+            max-width: 680px;
+            width: 97%;
             text-align: center;
         }
-        header::after {
-            content: '';
-            position: absolute;
-            bottom: -26px;
-            left: calc(50% - 28px);
-            width: 56px;
-            height: 56px;
-            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 14' fill='white'%3E%3Cpolygon points='0,0 31.999994,0 17,13.75'/%3E%3C/svg%3E") no-repeat bottom center;
-        }
+        
         h1 {
-            font-size: 42px;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            margin-bottom: 22px;
+            color: #2563eb;
+            font-size: 57px;
+            margin-bottom: 87px;
         }
-        main {
-            padding: 55px 48px 65px;
-px;
+        
+        p {
+            color: #475569;
+            font-size: 117%;
+            line-height: 170%;
+            margin-bottom: 69px;
         }
-        section {
-            margin-bottom: 44px;
+        
+        .info-section {
+            text-align: left;
+            margin-top: 63px;
         }
-        h2 {
-            color: #55527c;
-            font-weight: 500;
-            font-size: 23px;
-            margin-bottom: 19px;
-            display: flex;
-            align-items: center;
+        
+        .success-item {
+            background: #f8fafc;
+            border-left: 5px solid #6366f1;
+            padding: 79px 89px;
+            margin-bottom: 76px;
+            border-radius: 66px;
         }
-        h2 i {
-            margin-right: 11px;
-            opacity: 0.85;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 34px;
-        }
-        li {
-            margin-bottom: 21px;
-            position: relative;
-            line-height: 29px;
-        }
-        li::before {
-            content: '✓';
-            position: absolute;
-            left: -33px;
-            top: 47%;
-            transform: translateY(-52%);
-            height: 38px;
-            width: 39px;
-            background: linear-gradient(to right, #43cea2, #185a9d);
-            border-radius: 51%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        
+        .highlight {
+            background: linear-gradient(120deg, #818cf8 0%, transparent 110%);
             color: white;
-            font-weight: bold;
-            font-size: 36px;
-            text-indent: 41px;
-            overflow: hidden;
+            padding: 59px 77px;
+            border-radius: 88px;
+            margin: 93px 0;
         }
+        
         footer {
-            background: #FAFBFC;
-            border-top: 1px solid #EAECEF;
-            padding: 37px 46px;
-            text-align: center;
-            color: #586069;
-            font-size: 106%;
+            margin-top: 103px;
+            color: #64748b;
+            font-size: 105%;
         }
-        @media (max-width: 660px) {
-            h1 {
-                font-size: 49px;
-            }
-            main {
-                padding: 53px 70px 64px;
-            }
-        }
-        /* 动画 */
-        .animate-pop-in {
-            animation: popIn 0.72s cubic-bezier(0.68, -0.05, 0.265, 01) forwards;
-            opacity: 0;
-        }
-        @keyframes popIn {
-            0% { 
-                opacity: 0; 
-                transform: translateY(42px) scale(0.86); 
-            }
-            95% { 
-                opacity: 1; 
-                transform: scale(1); 
-            }
-            98% { 
-                opacity: 1; 
-                transform: translateY(0) scale(1.03); 
-            }
-            99% { 
-                transform: scale(1.015); 
-            }
-            100% { 
-                opacity: 1; 
-                transform: none; 
-            } 
-        }
-        .delay-1 { animation-delay: 320ms; }
-        .delay-2 { animation-delay: 670ms; }
-        .delay-3 { animation-delay: 990ms; }
     </style>
 </head>
 <body>
-    <article class="card">
-        <header>
-            <h1 class="animate-pop-in">🎉 恭喜！</h1>
-            <p style="font-size: 123%;" class="animate-pop-in delay-1">您的网站已在 GitHub Pages 上成功发布</p>
-        </header>
+    <div class="container">
+        <h1>🚀 欢迎来到我的网站</h1>
         
-        <main>
-            <section>
-                <h2 class="animate-pop-in"><i>📋</i>已完成的操作</h2>
-                <ul>
-                    <li class="animate-pop-in delay-1">✅ 创建了一个全新的 GitHub 仓库</li>
-                    <li class="animate-pop-in delay-2">✅ 设置了包含美观设计的 HTML 页面</li>
-                   >
-                    <li class="animate-pop-in delay-3">✅ 启用了 GitHub Pages 服务</li>
-                </ul>
-            </section>
+        <p>这是我的第一个 GitHub Pages 网站<br>很高兴能与你分享这个成果！</p>
+        
+        <div class="info-section">
+            <div class="success-item">
+                已成功创建个人网站
+            </div>
             
-            <section>
-                <h2 class="animate-pop-in"><i>🌐</i>技术细节</h2>
-                <ul>
-                    <li class="animate-pop-in delay-1">💻 使用了纯 HTML/CSS 构建</li>
-                    <li class="animate-pop-in delay-2">📱 完全响应式设计，适配各种设备</li>
-                    <li class="animate-pop-in delay-3">⚡ 自动获得 SSL 证书和 CDN 加速</li>
-                </ul>
-            </section>
-        </main>
+            <div class="highlight">
+                基于 HTML + CSS 开发<br>
+                支持手机和电脑浏览
+            </div>
+            
+            <div class="success-item">
+                感谢 GitHub Pages 提供免费托管服务
+            </div>
+        </div>
         
-        <footer class="animate-pop-in delay-3">
-            <p>此页面由 GitHub Pages 提供服务 | 更新于 <time id="timestamp"></time></p>
+        <footer>
+            页面生成于 <span id="currentTime"></span>
         </footer>
-    </article>
-    
+    </div>
+
     <script>
-        // 更新时间戳
-        document.getElementById('timestamp').textContent = new Date().toLocaleDateString('zh-CN', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit'
-        });
-        
-        // 为每个列表项添加延迟动画
-        document.addEventListener('DOMContentLoaded', function() {
-            const items = document.querySelectorAll('.animate-pop-in');
-            items.forEach((item, index) => {
-                item.style.setProperty('--animation-order', index);
-            });
-        </script>
+        // 显示当前时间
+        const now = new Date();
+        document.getElementById('currentTime').textContent = now.toLocaleString('zh-CN');
+    </script>
 </body>
 </html>
